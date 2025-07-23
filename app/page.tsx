@@ -55,13 +55,14 @@ export default function PersonalBlog() {
   }, [])
 
   const navigationItems = [
-    { id: "home", label: "首页", icon: Home },
-    { id: "photography", label: "摄影", icon: Camera },
-    { id: "reading", label: "读书笔记", icon: BookOpen },
-    { id: "daily", label: "日常随想", icon: Coffee },
-    { id: "travel", label: "旅行记录", icon: Plane },
-    { id: "music", label: "音乐分享", icon: Music },
-    { id: "mood", label: "心情日记", icon: Heart },
+    { id: "home", label: "Home", icon: Home },
+    { id: "photography", label: "Photo", icon: Camera },
+    { id: "reading", label: "Book", icon: BookOpen },
+    { id: "daily", label: "Wandering", icon: Coffee },
+    { id: "travel", label: "Voyage", icon: Plane },
+    { id: "music", label: "Music", icon: Music },
+    { id: "mood", label: "Movie", icon: Heart },
+    { id: "macrame", label: "Macrame", icon: fa-shopping-cart },
   ]
 
   // 精选内容 - 混合类型展示
