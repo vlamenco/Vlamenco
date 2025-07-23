@@ -591,18 +591,14 @@ Away from the structured time of everyday life, you can discover your natural pa
               <div className="flex-1">
                 <h2 className="text-2xl font-bold mb-4">Me?</h2>
                 <div className="prose prose-gray dark:prose-invert max-w-none">
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    我是宇宙大喇叭，吹响灵魂的荣光！
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">我是宇宙大喇叭，吹响灵魂的荣光！</p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     I am the cosmic loudspeaker, sounding the glory of the soul!
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     Je suis le mégaphone cosmique, qui fait retentir la gloire de l'âme !
                   </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    !أنا البوصلة الكونية التي تُضجِّع نعمة الروح
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed">!أنا البوصلة الكونية التي تُضجِّع نعمة الروح</p>
                 </div>
                 <div className="flex items-center space-x-4 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <span className="text-sm font-medium text-muted-foreground">Follow me:</span>
@@ -613,12 +609,7 @@ Away from the structured time of everyday life, you can discover your natural pa
                       className="h-9 w-9 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
                       asChild
                     >
-                      <a
-                        href="https://github.com/vlamenco"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="GitHub"
-                      >
+                      <a href="https://github.com/vlamenco" target="_blank" rel="noopener noreferrer" title="GitHub">
                         <Github className="h-4 w-4" />
                       </a>
                     </Button>
@@ -676,6 +667,24 @@ Away from the structured time of everyday life, you can discover your natural pa
                         </div>
                       </a>
                     </Button>
+
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="h-9 w-9 p-0 hover:bg-green-50 dark:hover:bg-green-950/20"
+                      asChild
+                    >
+                      <a
+                        href="https://www.douban.com/people/vlamenco19/?_i=3257934Pvou3qn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="douban"
+                      >
+                        <div className="h-4 w-4 bg-green-500 rounded-sm flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">豆</span>
+                        </div>
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -700,7 +709,7 @@ Away from the structured time of everyday life, you can discover your natural pa
         <div className="space-y-6">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold mb-4">{sectionTitle}</h1>
-            <p className="text-muted-foreground">这里收录了我关于{sectionTitle.toLowerCase()}的所有文章</p>
+            <p className="text-muted-foreground">Just click click click {sectionTitle.toLowerCase()}'s childrens</p>
           </div>
           <div className="grid gap-4">
             {sectionArticles.map((article, index) => (
@@ -772,7 +781,7 @@ Away from the structured time of everyday life, you can discover your natural pa
               <AvatarFallback>Vlamenco</AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="font-semibold">Vlamenco's Venus Zone</h2>
+              <h2 className="font-semibold">Vlamenco</h2>
               <p className="text-xs text-muted-foreground">2047</p>
             </div>
           </div>
