@@ -24,8 +24,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    /* 多巴胺主色调 - 明亮的粉色和紫色 */
-    --primary: 326 100% 60%;
+    /* 多巴胺主色调 - 明亮的 紫色 */
+    --primary: 0 100%,81%;
     --primary-foreground: 0 0% 98%;
 
     /* 活力橙黄色作为次要色调 */
@@ -36,8 +36,8 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    /* 强调色使用明亮的蓝色 */
-    --accent: 262 83% 58%;
+    /* 强调色使用 的红色 */
+    --accent: 0 100% 92%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,7 +45,7 @@
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 326 100% 60%;
+    --ring: 322 47% 45%;
 
     --chart-1: 326 100% 60%;
     --chart-2: 262 83% 58%;
@@ -60,10 +60,10 @@
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 119 50% 60%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 262 23% 58%;
+    --sidebar-accent: 0 100% 92%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 240 4.9% 83.9%;
-    --sidebar-ring: 326 100% 60%;
+    --sidebar-ring: 0 100% 92%;
   }
 
   .dark {

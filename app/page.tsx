@@ -575,8 +575,8 @@ Away from the structured time of everyday life, you can discover your natural pa
             <Image src="/placeholder.svg?height=320&width=800" alt="博客头图" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="text-center text-white">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">张三的生活札记</h1>
-                <p className="text-lg md:text-xl opacity-90">记录生活的美好瞬间</p>
+                <h1 className="text-4xl md:text-6xl font-bold mb-4">Vlamenco's Venus Zone</h1>
+                <p className="text-lg md:text-xl opacity-90">光彩照人 beautiful belle جَمِيلة</p>
               </div>
             </div>
           </div>
@@ -586,23 +586,26 @@ Away from the structured time of everyday life, you can discover your natural pa
             <div className="flex items-start space-x-6">
               <Avatar className="h-20 w-20 border-4 border-white shadow-lg">
                 <AvatarImage src="/placeholder.svg?height=80&width=80" alt="头像" />
-                <AvatarFallback className="text-2xl">张三</AvatarFallback>
+                <AvatarFallback className="text-2xl">Vlamenco</AvatarFallback>
               </Avatar>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold mb-4">关于我</h2>
+                <h2 className="text-2xl font-bold mb-4">Me?</h2>
                 <div className="prose prose-gray dark:prose-invert max-w-none">
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    你好，我是张三。这里是我的个人空间，用来记录生活中的点点滴滴。
+                    我是宇宙大喇叭，吹响灵魂的荣光！
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    我喜欢摄影、阅读、旅行和音乐。相信生活中的每一个瞬间都值得被记录和分享。
+                    I am the cosmic loudspeaker, sounding the glory of the soul!
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    在这里，你会看到我精心挑选的文章、感悟和图片，希望能与你产生共鸣。
+                    Je suis le mégaphone cosmique, qui fait retentir la gloire de l'âme !
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    !أنا البوصلة الكونية التي تُضجِّع نعمة الروح
                   </p>
                 </div>
                 <div className="flex items-center space-x-4 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <span className="text-sm font-medium text-muted-foreground">关注我：</span>
+                  <span className="text-sm font-medium text-muted-foreground">Follow me:</span>
                   <div className="flex items-center space-x-3">
                     <Button
                       variant="ghost"
@@ -611,7 +614,7 @@ Away from the structured time of everyday life, you can discover your natural pa
                       asChild
                     >
                       <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/vlamenco"
                         target="_blank"
                         rel="noopener noreferrer"
                         title="GitHub"
@@ -627,10 +630,10 @@ Away from the structured time of everyday life, you can discover your natural pa
                       asChild
                     >
                       <a
-                        href="https://xiaohongshu.com/user/profile/yourid"
+                        href="https://www.xiaohongshu.com/user/profile/6400af0600000000290133c5?xsec_token=ABNG-g9ajzDVRwS9mk-5-hgilQWrFin_YN4v-dakcLPJU=&xsec_source=pc_search"
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="小红书"
+                        title="Red book"
                       >
                         <div className="h-4 w-4 bg-red-500 rounded-sm flex items-center justify-center">
                           <span className="text-white text-xs font-bold">小</span>
@@ -645,10 +648,10 @@ Away from the structured time of everyday life, you can discover your natural pa
                       asChild
                     >
                       <a
-                        href="https://space.bilibili.com/yourid"
+                        href="https://space.bilibili.com/37959322?spm_id_from=333.33.0.0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="哔哩哔哩"
+                        title="bilibili"
                       >
                         <div className="h-4 w-4 bg-gradient-to-r from-blue-400 to-pink-400 rounded-sm flex items-center justify-center">
                           <span className="text-white text-xs font-bold">B</span>
@@ -663,10 +666,10 @@ Away from the structured time of everyday life, you can discover your natural pa
                       asChild
                     >
                       <a
-                        href="https://www.mafengwo.cn/u/yourid.html"
+                        href="https://www.mafengwo.cn/u/86257380.html"
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="蚂蜂窝"
+                        title="mafengwo"
                       >
                         <div className="h-4 w-4 bg-yellow-500 rounded-sm flex items-center justify-center">
                           <span className="text-white text-xs font-bold">蜂</span>
@@ -682,8 +685,8 @@ Away from the structured time of everyday life, you can discover your natural pa
           {/* 精选内容 */}
           <div>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">精选内容</h2>
-              <p className="text-muted-foreground text-sm">我亲自挑选的文章、句子和图片</p>
+              <h2 className="text-2xl font-bold">Laser emission</h2>
+              <p className="text-muted-foreground text-sm">The brightest stars:</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">{featuredContent.map(renderFeaturedItem)}</div>
           </div>
@@ -715,7 +718,7 @@ Away from the structured time of everyday life, you can discover your natural pa
 
           {/* 显示选中文章的详细内容 */}
           {sectionArticles.length > 0 && (
-            <div className="mt-12 p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
+            <div className="mt-12 p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg font-extralight">
               <article className="prose prose-lg dark:prose-invert max-w-none">
                 <ReactMarkdown>{sectionArticles[0].content}</ReactMarkdown>
               </article>
@@ -731,7 +734,7 @@ Away from the structured time of everyday life, you can discover your natural pa
       {/* 可爱的鼠标跟随字母V */}
       <div
         className={`fixed pointer-events-none z-50 transition-all duration-300 ${
-          isMouseMoving ? "opacity-100 scale-100" : "opacity-0 scale-75"
+          isMouseMoving ? "opacity-100 scale-70" : "opacity-0 scale-45"
         }`}
         style={{
           left: mousePosition.x + 15,
@@ -766,11 +769,11 @@ Away from the structured time of everyday life, you can discover your natural pa
           <div className="flex items-center space-x-3 mb-8">
             <Avatar className="h-10 w-10">
               <AvatarImage src="/placeholder.svg?height=40&width=40" alt="头像" />
-              <AvatarFallback>张三</AvatarFallback>
+              <AvatarFallback>Vlamenco</AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="font-semibold">张三的生活</h2>
-              <p className="text-xs text-muted-foreground">记录美好时光</p>
+              <h2 className="font-semibold">Vlamenco's Venus Zone</h2>
+              <p className="text-xs text-muted-foreground">2047</p>
             </div>
           </div>
 
@@ -797,8 +800,8 @@ Away from the structured time of everyday life, you can discover your natural pa
           <Separator className="my-6" />
 
           <div className="text-xs text-muted-foreground">
-            <p className="mb-2">© 2024 张三的生活札记</p>
-            <p>用心记录每一个美好瞬间</p>
+            <p className="mb-2">© Vlamenco2047</p>
+            <p>大河向东流啊~</p>
           </div>
         </div>
       </aside>
