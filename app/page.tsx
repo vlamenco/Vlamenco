@@ -22,6 +22,7 @@ import {
   Github,
 } from "lucide-react"
 import Image from "next/image"
+import ReactMarkdown from "react-markdown"
 
 export default function PersonalBlog() {
   const [activeSection, setActiveSection] = useState("home")
@@ -58,11 +59,14 @@ export default function PersonalBlog() {
     { id: "home", label: "Home", icon: Home },
     { id: "photography", label: "Photo", icon: Camera },
     { id: "reading", label: "Book", icon: BookOpen },
-    { id: "daily", label: "Wandering", icon: Coffee },
+    { id: "daily", label: "Daily", icon: Coffee },
     { id: "travel", label: "Voyage", icon: Plane },
     { id: "music", label: "Music", icon: Music },
     { id: "mood", label: "Movie", icon: Heart },
-    { id: "macrame", label: "Macrame", icon: fa-shopping-cart },
+    { id: "english", label: "English", icon: BookOpen },
+    { id: "french", label: "Française", icon: BookOpen },
+    { id: "arabic", label: "اللغة العربية", icon: BookOpen },
+    { id: "macrame", label: "Macrame", icon: Heart },
   ]
 
   // 精选内容 - 混合类型展示
@@ -119,37 +123,363 @@ export default function PersonalBlog() {
     },
   ]
 
+  // 这里是各个导航栏的内容，您可以在这里添加Markdown格式的内容
   const articles = {
     photography: [
-      { title: "街头摄影技巧分享", date: "2024-01-20", excerpt: "如何在繁忙的街道中捕捉动人瞬间" },
-      { title: "光影的艺术", date: "2024-01-18", excerpt: "探索自然光在摄影中的运用" },
-      { title: "黑白摄影的魅力", date: "2024-01-15", excerpt: "为什么黑白照片总是那么有故事感" },
+      {
+        title: "Street Photography Tips",
+        date: "2024-01-20",
+        excerpt: "How to capture moving moments on busy streets",
+        content: `
+# Street Photography Tips
+
+## Finding the Right Moment
+
+When shooting on the street, patience is key. Wait for the decisive moment when all elements align perfectly.
+
+- Look for interesting light and shadows
+- Focus on authentic human expressions
+- Capture the essence of daily life
+
+![Street Photography](/placeholder.svg?height=300&width=500&query=street+photography)
+
+> "The best images are the ones that retain their strength and impact over the years, regardless of the number of times they are viewed." — Anne Geddes
+        `,
+      },
+      {
+        title: "The Art of Light and Shadow",
+        date: "2024-01-18",
+        excerpt: "Exploring natural light in photography",
+        content: `
+# The Art of Light and Shadow
+
+Light is the essence of photography. Understanding how to work with natural light can transform your images from ordinary to extraordinary.
+
+## Key Techniques:
+1. Golden hour shooting
+2. Working with backlighting
+3. Creating silhouettes
+4. Using shadows as compositional elements
+
+![Light and Shadow](/placeholder.svg?height=300&width=500&query=light+and+shadow+photography)
+        `,
+      },
+      {
+        title: "The Charm of Black and White Photography",
+        date: "2024-01-15",
+        excerpt: "Why black and white photos always tell stories",
+        content: `
+# The Charm of Black and White Photography
+
+Black and white photography strips away the distraction of color and focuses on:
+- Form
+- Texture
+- Contrast
+- Emotion
+
+## Why Choose Black and White?
+
+Sometimes removing color helps viewers focus on the emotional content of an image. Without color to distract, the composition and subject matter take center stage.
+
+![Black and White](/placeholder.svg?height=300&width=500&query=black+and+white+photography)
+
+### Recommended Settings:
+- Higher contrast
+- Pay attention to textures
+- Look for strong compositional elements
+- Focus on the play of light and shadow
+        `,
+      },
     ],
     reading: [
-      { title: "《百年孤独》读后感", date: "2024-01-19", excerpt: "魔幻现实主义的文学魅力" },
-      { title: "村上春树的孤独美学", date: "2024-01-12", excerpt: "从《挪威的森林》谈起" },
-      { title: "科幻小说推荐清单", date: "2024-01-08", excerpt: "那些改变我世界观的科幻作品" },
+      {
+        title: "One Hundred Years of Solitude Review",
+        date: "2024-01-19",
+        excerpt: "The literary charm of magical realism",
+        content: `
+# One Hundred Years of Solitude: A Journey Through Time
+
+Gabriel García Márquez's masterpiece takes us through the multi-generational story of the Buendía family in the fictional town of Macondo.
+
+## The Magic of Magical Realism
+
+What makes this novel special is how it blends the mundane with the magical:
+
+- Butterflies follow characters who are in love
+- A character ascends to heaven while hanging laundry
+- Rain falls for years, then stops for decades
+
+> "Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice."
+
+This opening line sets the tone for a novel that bends time and reality in fascinating ways.
+
+![One Hundred Years of Solitude](/placeholder.svg?height=300&width=500&query=one+hundred+years+of+solitude+book)
+        `,
+      },
+      {
+        title: "Haruki Murakami's Aesthetic of Solitude",
+        date: "2024-01-12",
+        excerpt: "Starting from Norwegian Wood",
+        content: `
+# Haruki Murakami's Aesthetic of Solitude
+
+## Norwegian Wood: A Gateway to Murakami's World
+
+Norwegian Wood stands apart from Murakami's more surrealist works, offering a relatively straightforward narrative about love, loss, and growing up in 1960s Japan.
+
+### Key Themes:
+- Isolation in modern society
+- The thin line between reality and memory
+- Music as a connector between people and experiences
+- The weight of the past on the present
+
+![Norwegian Wood](/placeholder.svg?height=300&width=500&query=norwegian+wood+murakami)
+
+> "If you only read the books that everyone else is reading, you can only think what everyone else is thinking."
+        `,
+      },
+      {
+        title: "Science Fiction Reading List",
+        date: "2024-01-08",
+        excerpt: "Sci-fi works that changed my worldview",
+        content: `
+# Science Fiction That Changed My Worldview
+
+Science fiction at its best doesn't just entertain—it challenges our assumptions about reality, society, and what it means to be human.
+
+## Essential Reading:
+
+1. **Dune** by Frank Herbert
+   - Explores ecology, religion, and politics in a far-future space empire
+   - Themes of prescience and fate remain relevant today
+
+2. **Neuromancer** by William Gibson
+   - Defined cyberpunk and predicted many aspects of our digital world
+   - "The sky above the port was the color of television, tuned to a dead channel."
+
+3. **The Three-Body Problem** by Liu Cixin
+   - A masterpiece of hard science fiction with a unique Chinese perspective
+   - Explores the consequences of first contact with an alien civilization
+
+4. **Hyperion** by Dan Simmons
+   - A Canterbury Tales-inspired structure with multiple narrators
+   - Combines literary references with far-future technology
+
+![Science Fiction Books](/placeholder.svg?height=300&width=500&query=science+fiction+books)
+        `,
+      },
     ],
+    // 其他导航项的内容...
     daily: [
-      { title: "关于慢生活的思考", date: "2024-01-20", excerpt: "在快节奏的世界中寻找内心的平静" },
-      { title: "咖啡与人生", date: "2024-01-17", excerpt: "每一杯咖啡都有它的故事" },
-      { title: "城市中的小确幸", date: "2024-01-14", excerpt: "发现生活中被忽略的美好瞬间" },
+      {
+        title: "Thoughts on Slow Living",
+        date: "2024-01-20",
+        excerpt: "Finding inner peace in a fast-paced world",
+        content: `
+# Embracing Slow Living in a Fast-Paced World
+
+In today's hyperconnected society, the concept of "slow living" offers a refreshing counterpoint to our culture of constant productivity and speed.
+
+## What is Slow Living?
+
+Slow living isn't about doing everything at a snail's pace. Rather, it's about:
+
+- Being present in each moment
+- Making deliberate choices about how we spend our time
+- Prioritizing quality over quantity
+- Connecting deeply with people, places, and activities
+
+## Simple Practices to Slow Down
+
+1. **Morning rituals** - Start your day intentionally rather than reaching for your phone
+2. **Mindful eating** - Savor each bite rather than eating on the go
+3. **Digital detox** - Set boundaries around technology use
+4. **Single-tasking** - Focus on one activity at a time
+
+![Slow Living](/placeholder.svg?height=300&width=500&query=slow+living+peaceful)
+
+> "Nature does not hurry, yet everything is accomplished." — Lao Tzu
+        `,
+      },
+      {
+        title: "Coffee and Life",
+        date: "2024-01-17",
+        excerpt: "Every cup of coffee has its story",
+        content: `
+# Coffee and Life: Brewing Moments of Joy
+
+There's something magical about the ritual of making coffee. The process itself—grinding beans, heating water to the perfect temperature, watching the bloom as hot water hits fresh grounds—forces us to slow down.
+
+## The Art of Hand-Brewing
+
+Hand-brewing methods like pour-over, French press, or AeroPress create space for mindfulness in our day:
+
+- The precision of weighing beans
+- The rhythm of the pour
+- The patience of the brew
+- The reward of that first sip
+
+![Coffee Brewing](/placeholder.svg?height=300&width=500&query=hand+brewing+coffee)
+
+## Coffee as Connection
+
+Beyond the beverage itself, coffee creates moments of connection:
+
+- Morning conversations with loved ones
+- Meeting friends at a local café
+- Supporting local roasters and their relationships with farmers
+- Participating in a ritual shared across cultures and generations
+
+> "Coffee is a language in itself." — Jackie Chan
+        `,
+      },
+      {
+        title: "Small Joys in the City",
+        date: "2024-01-14",
+        excerpt: "Discovering overlooked beautiful moments in life",
+        content: `
+# Finding Small Joys in Urban Life
+
+Cities can sometimes feel overwhelming—concrete, noise, crowds, and constant motion. Yet within this urban landscape lie countless small moments of beauty and joy, if only we train ourselves to notice them.
+
+## Urban Treasures to Seek Out
+
+### Nature Reclaiming Space
+- Wildflowers pushing through sidewalk cracks
+- Birds nesting in unexpected places
+- Community gardens transforming vacant lots
+
+### Human Connections
+- Street musicians sharing their art
+- Spontaneous conversations with strangers
+- The familiar smile of your local shopkeeper
+
+### Sensory Delights
+- The aroma from a neighborhood bakery
+- Sunset light reflecting off glass buildings
+- The peaceful hour just after rain
+
+![Urban Joy](/placeholder.svg?height=300&width=500&query=urban+life+small+joys)
+
+## Practicing Urban Mindfulness
+
+1. Take different routes to familiar destinations
+2. Look up (architecture above street level is often overlooked)
+3. Visit local markets and small businesses
+4. Sit in public spaces without checking your phone
+
+> "The city is not a concrete jungle. It is a human zoo." — Desmond Morris
+        `,
+      },
     ],
     travel: [
-      { title: "京都的秋天", date: "2024-01-16", excerpt: "红叶季节的古都之旅" },
-      { title: "西藏行记", date: "2024-01-10", excerpt: "高原上的心灵洗礼" },
-      { title: "海边小镇的慢时光", date: "2024-01-05", excerpt: "在海风中找到内心的宁静" },
+      {
+        title: "Autumn in Kyoto",
+        date: "2024-01-16",
+        excerpt: "A journey to the ancient capital during maple season",
+        content: `
+# Autumn in Kyoto: A Symphony of Colors
+
+There's something magical about Kyoto in autumn. As the ancient capital of Japan transforms with fiery maples and golden ginkgos, the city's 1,600+ temples and shrines take on an ethereal quality.
+
+## Must-Visit Autumn Spots
+
+### Tofuku-ji Temple
+The view from the Tsutenkyo Bridge over a valley of maple trees is perhaps the most famous autumn scene in Kyoto.
+
+### Arashiyama Bamboo Grove
+While famous year-round, the contrast between green bamboo and the surrounding autumn foliage is particularly striking.
+
+### Philosopher's Path
+This stone path alongside a canal is lined with maple trees that create a tunnel of red and orange.
+
+![Kyoto Autumn](/placeholder.svg?height=300&width=500&query=kyoto+autumn+leaves)
+
+## Beyond the Foliage
+
+Autumn in Kyoto offers more than just beautiful leaves:
+
+- Seasonal kaiseki cuisine featuring matsutake mushrooms and chestnuts
+- Less crowded temples in the early morning hours
+- The special evening illuminations at select temples
+- The crisp air that makes walking the city a pleasure
+
+> "Kyoto was designed with an eye to beauty... Everywhere in the city you find gardens and parks, temples and palaces." — Pico Iyer
+        `,
+      },
+      {
+        title: "Tibet Travel Notes",
+        date: "2024-01-10",
+        excerpt: "Spiritual cleansing on the plateau",
+        content: `
+# Tibet: Journey to the Roof of the World
+
+At an average elevation of 4,500 meters, the Tibetan Plateau offers not just breathtaking landscapes but a profound spiritual experience that stays with travelers long after they've descended to lower altitudes.
+
+## Adapting to the Altitude
+
+The first lesson Tibet teaches is patience. Your body must adjust to the thin air:
+- Move slowly for the first few days
+- Drink plenty of water
+- Consider taking altitude sickness medication
+- Listen to your body and rest when needed
+
+## Sacred Sites
+
+### Potala Palace
+The former winter residence of the Dalai Lama rises 13 stories from Red Hill, containing over 1,000 rooms, 10,000 shrines, and 200,000 statues.
+
+### Jokhang Temple
+The spiritual heart of Tibet, where pilgrims prostrate themselves in devotion before entering the most sacred temple in Tibetan Buddhism.
+
+### Namtso Lake
+One of the highest saltwater lakes in the world, surrounded by snow-capped mountains and considered one of Tibet's three holy lakes.
+
+![Tibet Landscape](/placeholder.svg?height=300&width=500&query=tibet+mountains+lake)
+
+> "The goal is not to be better than the other man, but your previous self." — Tibetan Proverb
+        `,
+      },
+      {
+        title: "Seaside Town Getaway",
+        date: "2024-01-05",
+        excerpt: "Finding tranquility by the ocean",
+        content: `
+# Finding Peace in a Seaside Town
+
+There's something about small coastal towns that invites us to slow down. Perhaps it's the rhythm of the waves, the expansive horizon, or simply being away from our usual surroundings.
+
+## The Joy of Coastal Mornings
+
+The early hours in a seaside town have a special quality:
+- Misty shores before the day tourists arrive
+- Local fishermen returning with the morning catch
+- The particular quality of light as the sun rises over water
+- The smell of salt and seaweed in the cool morning air
+
+## Simple Pleasures
+
+A seaside retreat offers simple but profound joys:
+- Reading a book on the beach with no agenda
+- Conversations with locals who live by different rhythms
+- Seafood eaten within sight of the water it came from
+- Watching the changing moods of the sea throughout the day
+
+![Seaside Town](/placeholder.svg?height=300&width=500&query=peaceful+seaside+town)
+
+## Finding Your Own Rhythm
+
+Away from the structured time of everyday life, you can discover your natural pace:
+- Sleep when tired, eat when hungry
+- Let curiosity guide your explorations
+- Make space for spontaneous discoveries
+- Allow yourself to be present without planning the next activity
+
+> "The sea, once it casts its spell, holds one in its net of wonder forever." — Jacques Cousteau
+        `,
+      },
     ],
-    music: [
-      { title: "我的年度歌单", date: "2024-01-18", excerpt: "2024年最打动我的音乐作品" },
-      { title: "爵士乐入门指南", date: "2024-01-13", excerpt: "从经典专辑开始的音乐之旅" },
-      { title: "独立音乐的魅力", date: "2024-01-09", excerpt: "那些小众但动人的声音" },
-    ],
-    mood: [
-      { title: "关于成长的碎碎念", date: "2024-01-19", excerpt: "三十岁后的人生感悟" },
-      { title: "孤独是一种能力", date: "2024-01-11", excerpt: "学会与自己相处的艺术" },
-      { title: "写给未来的自己", date: "2024-01-06", excerpt: "时间胶囊里的心情记录" },
-    ],
+    // 添加其他导航项的内容...
   }
 
   const renderFeaturedItem = (item: any) => {
@@ -160,10 +490,10 @@ export default function PersonalBlog() {
         return (
           <Card
             key={item.id}
-            className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border-l-4 border-l-blue-500"
+            className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-950/20 dark:to-orange-950/20 border-l-4 border-l-yellow-500"
           >
             <div className="flex items-start space-x-3">
-              <Quote className="h-6 w-6 text-blue-500 mt-1 flex-shrink-0" />
+              <Quote className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
               <div className="flex-1">
                 <blockquote className="text-lg font-medium leading-relaxed mb-3 italic">"{item.content}"</blockquote>
                 <div className="flex items-center justify-between">
@@ -210,10 +540,10 @@ export default function PersonalBlog() {
         return (
           <Card
             key={item.id}
-            className="p-6 hover:shadow-md transition-shadow cursor-pointer border-l-4 border-l-orange-500"
+            className="p-6 hover:shadow-md transition-shadow cursor-pointer border-l-4 border-l-pink-500"
           >
             <div className="flex items-start space-x-3">
-              <FileText className="h-5 w-5 text-orange-500 mt-1 flex-shrink-0" />
+              <FileText className="h-5 w-5 text-pink-500 mt-1 flex-shrink-0" />
               <div className="flex-1">
                 <h3 className="text-lg font-semibold mb-2 hover:text-primary transition-colors">{item.title}</h3>
                 <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{item.excerpt}</p>
@@ -252,7 +582,7 @@ export default function PersonalBlog() {
           </div>
 
           {/* 个人简介区域 */}
-          <Card className="p-8 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/50 dark:to-gray-900/50">
+          <Card className="p-8 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30">
             <div className="flex items-start space-x-6">
               <Avatar className="h-20 w-20 border-4 border-white shadow-lg">
                 <AvatarImage src="/placeholder.svg?height=80&width=80" alt="头像" />
@@ -382,6 +712,15 @@ export default function PersonalBlog() {
               </Card>
             ))}
           </div>
+
+          {/* 显示选中文章的详细内容 */}
+          {sectionArticles.length > 0 && (
+            <div className="mt-12 p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
+              <article className="prose prose-lg dark:prose-invert max-w-none">
+                <ReactMarkdown>{sectionArticles[0].content}</ReactMarkdown>
+              </article>
+            </div>
+          )}
         </div>
       )
     }
